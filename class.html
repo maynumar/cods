@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title> coding </title>
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <style>
+        .safari-slide{
+            text-align: center;
+            height: 200px;
+            font-size: 15px;
+            padding-top: 75px;
+        }
+        .slide-forest {background-color: blueviolet;}
+        .slide-ocean {background-color: blue;}
+    </style>
+    <body>
+        <div  class="carousel alide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#safarocarousel"></li>
+                <li data-slide-to="1" data-target="#safarocarousel"></li>
+                <li data-slide-to="2" data-target="#safarocarousel"></li>
+            </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active safari-slide ">Forest</div>
+            <div class="carousel-item active safari-slide ">jungle</div>
+            <div class="carousel-item active safari-slide ">ocean</div>
+        
+        </div>
+        </div>
+        <nav id="#safariNav" class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <span class="navbar-brand">Safari guide</span>
+            <ul class="navbar">
+                <li class="nav-item"> <a href="#forest" class="nav-link">Forest</a></li>
+                <li class="nav-item"> <a href="#ocean" class="nav-link">Ocean</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div id="forest">
+                <h2>Forest</h2>
+                <p> Explore tall trees and many animals </p>
+            </div>
+            <div id="ocean">
+                <h2>Ocean</h2>
+                <p> it is water in very big amount</p>
+            </div>
+        </div>
+    </body>
+</html>

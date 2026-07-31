@@ -1,0 +1,17 @@
+body{
+    padding: 25px;
+
+}
+h1{
+    color:blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.new{
+    border: 3px dotted brown;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 15px;
+    width: 150px;
+    height: 250px;
+}
