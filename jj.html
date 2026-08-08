@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>javascript functions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <button style="color: brown" onclick="values(9)">execute java code</button>
+        <button style="background-color: aquamarine; color: black; border-radius: 12px; " type="button" onclick="myfunction()" >run the function </button>
+         
+        <script>
+            var result =function res (a,b) { return a*b; }
+            ////document.write(result(3,8))
+            function values (x,y){
+                if (y===undefined ){
+                    y=4;
+                }
+                document.write(x*y);
+            }
+            function myfunction(){
+                s=10
+                y=80
+                d=s+y;
+                document.getElementById("blue").innerHTML=d;
+            }
+        </script>
+
+    </body>
+</html>
