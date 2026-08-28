@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> PROFILE CARD </h1>
+        <p>NAME <span id="name"></span></p>
+        <p>SCORE <span id="score"></span></p>
+        <p>BONUS <span id="bonus"></span></p>
+        <p>GREETING <span id="greeting"></span></p>
+        <p>STAR <span id="star"></span></p>
+        <p>RANK <span id="rank"></span></p>
+
+        <script>
+            let name="Ayan";
+            let score="95";
+            let totalmarks="100";
+            let bonus=null;
+            let team;
+            let rank;
+            if(score>90){
+                rank="A+";
+            }
+            else if (score>80){
+                rank="A";
+            }
+            else if (score>70){
+                rank="B";
+            }
+            else if (score>60){
+                rank="C";
+            }
+            else{
+                rank="D";
+            }
+            let hour = new Date().getHours();
+            let greeting;
+            if (hour <12) {
+                greeting = "Good morning";
+            } else if (hour < 18) {
+                greeting = "Good afternoon";
+            } else {
+                greeting = "Good evening";
+            }
+            let star = "";
+            let count = 0;
+            while (count <1) {
+                star = star + "* ";
+                count = count+1;
+            }
+
+
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("score").innerHTML = score + "out of" + totalmarks;
+            document.getElementById("greeting").innerHTML = greeting;
+            document.getElementById("star").innerHTML = star;
+            document.getElementById("rank").innerHTML = rank;
+        </script>
+    </body>
+</html>
