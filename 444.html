@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <ul> 
+            <li> Reverse of array <span id="reversing"></span></li>
+            <li> Maping <span id="mapping"></span></li>
+            <li> aesanding order <span id="aescendingorder"></span></li>
+        </ul>
+        <script>
+            var languages = ["C++", "Java", "Python", "JavaScript"];
+            document.getElementById("reversing").innerHTML = languages.reverse();
+            document.getElementById("sorting").innerHTML = languages.sort();
+            var mappingofarray = languages.map( function (c){
+                return c + "pro";
+            })
+            document.getElementById("mapping").innerHTML = mappingofarray;
+            var aescendingorder = languages.sort( function (a,b){
+                return a-b;
+            })
+           document.getElementById("aescendingorder").innerHTML = aescendingorder;
+           
+               
+            
+        </script>
+    </body>
+</html>
