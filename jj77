@@ -1,0 +1,47 @@
+<html>
+<head> <title></title>
+</head>
+<body>
+    <script>
+        var sen = function checkTypes() {
+            document.getElementById("typeResult").innerText =
+            "score 43      -      " + typeof 43 + "\n" +
+            "name ayan     -      " + typeof "ayan" + "\n" +
+            "GAME OVER -      " + typeof true;
+
+        }
+        function toStr () {
+           var v= document.getElementById("numIn").value
+           document.getElementById("convResult").innerHTML = String (" +v + ")=" + String(v)"+" now it is  number";
+
+        }
+        function toNum () {
+            var v= document.getElementById("strIn").value
+            document.getElementById("convResult").innerHTML = Number (" +v + ")=" + Number(v)"+" now it is  number";
+        }
+        function doSearch(){
+             var w = document.getElementById("find").value;
+             var p = sen.search(w);
+             document.getElementById("searchResult").innerHTML = "The word " + w + " is found at index " + p;
+
+        }
+        function doReplace () {
+            var w = document.getElementById("findw").value;
+            document.getElementById("srReesult").innerHTML = "New Sentencces:"  + sen.replace(w, "GAME OVER");
+
+        }
+        function trySafe () {
+            try {
+                var n= document.getElementById("divIn").value;
+                if (n=== " " || isNaN(n)){
+                    throw new Error("Invalid input");
+                }
+            } catch (error) {
+                document.getElementById("divResult").innerHTML = error.message;
+            }
+        }
+        </script>
+       </body>
+       </html>
+
+        

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+    </head>
+    <body>
+        <h1> My delivery tracker </h1>
+        <button onclick="saveOrder()">Save Order</button>
+        <button onclick="startDelivery()">Start Delivery</button>
+
+        <div> JSON Text: <span id="json-text"></span></div>
+        <div> Loaded Items: <span id="loaded-items"></span></div>
+        <div> Loaded Price: <span id="loaded-price"></span></div>
+        <div> Status: <span id="status"></span></div>
+        <div> Result: <span id="result"></span></div>
+
+        <script> 
+                   
+                   let order ={
+                    item: "Pizza" ,
+                    price: 10 ,
+                    shop: "Pizza Hut" ,
+                   };
+                   function saveOrder(){
+                   let jsonText  = JSON.stringify(order);
+                   let loadedOrder = JSON.parse(jsonText);
+                   document.getElementById("json-text").textContent = jsonText;
+                   document.getElementById("loaded-items").textContent = loadedOrder.item;
+                   document.getElementById("loaded-price").textContent = loadedOrder.price;
+                   document.getElementById("status").textContent = "Order saved successfully";
+                   }
+  function delay(ms) {
+    return new Promise (function (resolve) {
+        setTimeout(resolve, ms);            
+    });
+  }
+  async function startDelivery() {
+    document.getElementById("result").innerHTML = "";
+
+    document.getElementById("status").innerHTML = "Order Recieved";
+    setTimeout(function() {
+        document.getElementById("status").innerHTML = "Order is being prepared";
+    }, 2000);
+
+    await delay (3000);
+    document.getElementById("status").innerHTML = "Out For Delivery";
+
+    await delay (200);
+    document.getElementById("result").innerHTML = "Delivered";
+}
+        </script>
+    </body>
+</html>
