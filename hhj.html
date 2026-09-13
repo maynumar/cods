@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+                background-color:blue
+            }
+            input[type=text]{
+            padding: 12px 20px;
+            margin: 8px 0;
+
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+                            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Guess the Lucky Number</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <span id="msg-name"></span>
+        <input type="text" id="guess" placeholder="Enter your guess">
+        <span id="msg-guess"></span>
+
+        <button onclick="checkForm()">Try my luck</button>
+        <p id="result"></p>
+        <p id="timer"></p>
+        <script>
+            var seconds = 0;
+            setInterval(function() {
+                seconds++;
+                document.getElementById("timer").textContent = "you have been here for " + seconds + " seconds";
+            }, 1000);
+
+            
+        
+
+      
+        function checkForm(){
+            var name = document.getElementById("name").value;
+            var guess = document.getElementById("guess").value;
+            var ok = true;
+           
+
+             if (name == ""){
+            document.getElementById("msg-name").textContent= "Please enter your name!";
+            document.getElementById("msg-name").style.color = "red";
+            ok = false;
+        } else {
+            document.getElementById("msg-name").textContent= "Great name!";
+            document.getElementById("msg-name").style.color = "green";
+        }
+    
+       
+
+        
+        if (guess == ""){
+            document.getElementById("msg-guess").textContent= "Please enter a guess!";
+            document.getElementById("msg-guess").style.color = "red";
+            ok = false;
+        } else {
+            document.getElementById("msg-guess").textContent= "Great guess!";
+            document.getElementById("msg-guess").style.color = "green";
+        }
+        if (ok == true) {
+            var lucky = Math.floor (Math.random() * 10) + 1;
+            if (guess == lucky) {
+                document.getElementById("result").textContent= "You guessed the lucky number!";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").textContent= "Sorry, the lucky number was " + lucky;
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    }
+
+        </script>
+
+    </body>
+</html>
