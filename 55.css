@@ -30,8 +30,8 @@ body{
 
 
      }
-     .footer{
-        background-color: brown;
+     #footer{
+        background-color: grey;
         text-align: center;
      }
     
